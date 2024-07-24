@@ -14,6 +14,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Routes
+app.post('/test', (req, res) => {
+  res.json(req.body)
+})
 app.use('/todos', todosRouter);
 
 
